@@ -86,11 +86,11 @@ body{margin: 0; padding: 0; -webkit-box-sizing: border-box;}
 				intv = setInterval(function(){
 				$('.right').click();
 				}, 3000);
-				}
-				auto(); // start
-				$('.form_container').hover(function( e ){
+			}
+			auto(); // start
+			$('.form_container').hover(function( e ){
 				return e.type=='mouseenter'?clearInterval(intv):auto();
-				});
+			});
 
 			defineSizes();
 		});
