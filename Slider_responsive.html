@@ -89,7 +89,7 @@ body{margin: 0; padding: 0; -webkit-box-sizing: border-box;}
 			}
 			auto(); // start
 			$('.form_container').hover(function( e ){
-				e.type=='mouseenter'?clearInterval(intv):auto();
+				return e.type=='mouseenter'?clearInterval(intv):auto();
 			});
 
 			defineSizes();
