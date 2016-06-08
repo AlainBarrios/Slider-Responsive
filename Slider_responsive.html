@@ -69,7 +69,9 @@ body{margin: 0; padding: 0; -webkit-box-sizing: border-box;}
 	</div>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript">
+	
 		var indicador = 0;
+		
 		$(document).on('ready', function(){
 
 			$('.left').on('click', function(e){
@@ -87,7 +89,9 @@ body{margin: 0; padding: 0; -webkit-box-sizing: border-box;}
 				$('.right').click();
 				}, 3000);
 			}
+			
 			auto(); // start
+			
 			$('.form_container').hover(function( e ){
 				return e.type=='mouseenter'?clearInterval(intv):auto();
 			});
@@ -95,21 +99,22 @@ body{margin: 0; padding: 0; -webkit-box-sizing: border-box;}
 			defineSizes();
 		});
 		
-		$(window).on('resize', defineSizes);	
-			function defineSizes(){
-				$('.form_container .slide').each(function(i, el) {
-					$(el).css({
-						'background-image': 'url('+$(el).data('background')+')',
-						'height': ($('.form_container').width() * 0.42)+'px',
-						'width' : ($('.form_container').width())+'px'
-					});
+		$(window).on('resize', defineSizes);
+		
+		function defineSizes(){
+			$('.form_container .slide').each(function(i, el) {
+				$(el).css({
+					'background-image': 'url('+$(el).data('background')+')',
+					'height': ($('.form_container').width() * 0.42)+'px',
+					'width' : ($('.form_container').width())+'px'
 				});
+			});
 
-				$('.form_container .slideContainer').css({
-					'margin-left': -(indicador * $('.form_container').width())+'px'
-				});
+			$('.form_container .slideContainer').css({
+				'margin-left': -(indicador * $('.form_container').width())+'px'
+			});
 
-			}
+		}	
 
 
 		function moveSlider(direccion){
@@ -123,6 +128,7 @@ body{margin: 0; padding: 0; -webkit-box-sizing: border-box;}
 			})
 
 		}
+		
 	</script>
 </body>
 </html>
